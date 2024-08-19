@@ -37,8 +37,7 @@ const getRoute = async (start, end) => {
                 'Content-Type': 'application/json',
                 // Add other headers as required by the API
             },
-            mode: 'cors', // Ensure CORS is enabled
-                credentials: 'include' // Use 'include' if the API requires cookies or other credentials
+            mode: 'cors' // Ensure CORS is enabled
         })
         const data = await response.json();
         // console.log("Route data:", data);
