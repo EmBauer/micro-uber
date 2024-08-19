@@ -31,7 +31,15 @@ const getRandomCoordinate = () => {
 const getRoute = async (start, end) => {
     try {
         const osrmUrl = `http://router.project-osrm.org/route/v1/driving/${start[1]},${start[0]};${end[1]},${end[0]}?overview=full&geometries=geojson`;
-        const response = await fetch(osrmUrl);
+        const response = await fetch(osrmUrl, {
+            method: 'GET', // or POST, PUT, DELETE, etc.
+                headers: {
+                'Content-Type': 'application/json',
+                // Add other headers as required by the API
+            },
+            mode: 'cors', // Ensure CORS is enabled
+                credentials: 'include' // Use 'include' if the API requires cookies or other credentials
+        })
         const data = await response.json();
         // console.log("Route data:", data);
         // Convert the route coordinates from [lng, lat] to [lat, lng]
