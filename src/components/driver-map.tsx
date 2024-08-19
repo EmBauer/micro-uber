@@ -30,7 +30,7 @@ const getRandomCoordinate = () => {
 // Fetch a route using the OSRM API between a start and end coordinate
 const getRoute = async (start, end) => {
     try {
-        const osrmUrl = `http://router.project-osrm.org/route/v1/driving/${start[1]},${start[0]};${end[1]},${end[0]}?overview=full&geometries=geojson`;
+        const osrmUrl = `https://router.project-osrm.org/route/v1/driving/${start[1]},${start[0]};${end[1]},${end[0]}?overview=full&geometries=geojson`;
         const response = await fetch(osrmUrl, {
             method: 'GET', // or POST, PUT, DELETE, etc.
                 headers: {
