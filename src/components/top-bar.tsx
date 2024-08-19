@@ -87,7 +87,7 @@ function TopBar({setResponse} : TopBarProps) {
                     {/*{isAuthenticated && isAdmin &&*/}
                     {/*    <div><Link to="/admin" className="hover:underline font-extrabold">Admin Panel</Link></div>}*/}
                     {isAuthenticated && <div><Link className="hover:underline font-extrabold"
-                                                   to="https://ubert.auth.eu-central-1.amazoncognito.com/logout?client_id=62skmsghj5jl9ofig9i6jjamnr&logout_uri=http://localhost:5173/logout">Logout</Link>
+                                                   to="https://ubert.auth.eu-central-1.amazoncognito.com/logout?client_id=62skmsghj5jl9ofig9i6jjamnr&logout_uri=https%3A%2F%2Fmain.d1yjl7rf5twhel.amplifyapp.com%2Flogout">Logout</Link>
                     </div>}
                     <div>
                         {isAuthenticated ? <button onClick={() => setSearchWindowOpen(prev => !prev)}
@@ -95,7 +95,7 @@ function TopBar({setResponse} : TopBarProps) {
                                 {searchWindowOpen ? <IoMdClose/> : <FaRoute/>}
                             </button>
                             : <Link
-                                to="https://ubert.auth.eu-central-1.amazoncognito.com/oauth2/authorize?client_id=62skmsghj5jl9ofig9i6jjamnr&response_type=token&scope=email+openid+phone&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Fcallback"
+                                to="https://ubert.auth.eu-central-1.amazoncognito.com/oauth2/authorize?client_id=62skmsghj5jl9ofig9i6jjamnr&response_type=token&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fmain.d1yjl7rf5twhel.amplifyapp.com%2Fcallback"
                                 className="font-extrabold hover:underline">Login</Link>
                         }
                     </div>

@@ -9,7 +9,7 @@ function AdminRoute() {
     if (!isAuthenticated) {
         console.error("user not authenticated");
         return <NavigateIn millis={500}
-                           externalTarget="https://ubert.auth.eu-central-1.amazoncognito.com/oauth2/authorize?client_id=62skmsghj5jl9ofig9i6jjamnr&response_type=token&scope=email+openid+phone&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Fcallback"/>
+                           externalTarget="https://ubert.auth.eu-central-1.amazoncognito.com/oauth2/authorize?client_id=62skmsghj5jl9ofig9i6jjamnr&response_type=token&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fmain.d1yjl7rf5twhel.amplifyapp.com%2Fcallback"/>
     }
 
     if (!isAdmin) {
